@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+background: linear-gradient(to right bottom,rgba(200, 100, 50, 0.9), #d10a20);
+min-height: 100vh;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 30px 100px;
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    /* grid-template:3fr, 6fr, 6fr , 0.2fr; */
+    grid-template-areas: "logo .... .... navig";
+    z-index: 100;
+    border: 2px solid black;
+}
+
+.logo-anc {
+    max-width: 80px;
+    max-height: 100px; 
+    grid-area: logo;
+}
+
+.logo {
+    max-width: 80px;
+    max-height: 120px;
+    border-radius: 50%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: navig;
+
+}
+
+.navigation li {
+    list-style:none;
+}
+
+.navigation li a{
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.content {
+    position: absolute;
+    top: 4rem;
+    color: #ffffff;
+    font-weight: 300;
+}
